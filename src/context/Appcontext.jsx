@@ -4,6 +4,35 @@ import { useNavigate } from "react-router-dom";
 
 const AppContext = createContext();
 
+// Dummy data
+const dummyUserData = {
+  id: 1,
+  name: "John Doe",
+  email: "john@example.com",
+  avatar: "https://via.placeholder.com/40",
+};
+
+const dummyChats = [
+  {
+    _id: "1",
+    name: "React Tips",
+    updatedAt: "Today",
+    messages: [{ content: "What is useState?" }],
+  },
+  {
+    _id: "2",
+    name: "JavaScript Help",
+    updatedAt: "Yesterday",
+    messages: [{ content: "How to use async/await?" }],
+  },
+  {
+    _id: "3",
+    name: "Project Discussion",
+    updatedAt: "2 days ago",
+    messages: [{ content: "Let''s start the new project" }],
+  },
+];
+
 export const AppContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
@@ -46,6 +75,9 @@ export const AppContextProvider = ({ children }) => {
     selectedChat,
     setSelectedChat,
     theme,
+    setTheme,
+    fetchUser,
+    fetchUserChats,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
