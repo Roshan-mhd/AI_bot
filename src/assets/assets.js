@@ -84,7 +84,7 @@ export const dummyChats = [
         "_id": "689de4bbaa932dc3a8ef6cd7",
         "userId": "689c6deed410acddc0d95a0e",
         "userName": "GreatStack",
-        "name": "New Chat",
+        "name": "Boy Running on Water",
         "messages": [
             {
                 "isImage": false,
@@ -107,7 +107,7 @@ export const dummyChats = [
     {
         "_id": "689ccb9016a922dd57a23fce",
         "userId": "689c6deed410acddc0d95a0e",
-        "name": "New Chat",
+        "name": "Jungle Wildlife Prompt",
         "messages": [
             {
                 "isImage": false,
@@ -326,3 +326,4 @@ export const dummyPublishedImages = [
         "userName": "GreatStack"
     }
 ]
+
