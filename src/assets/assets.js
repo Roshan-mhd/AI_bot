@@ -45,52 +45,19 @@ export const assets = {
   gallery_icon,
 };
 
-export const dummyUserData = {
-  _id: "689c6deed410acddc0d95a0e",
-  name: "Roshan",
-  email: "admin@example.com",
-  password: "$2b$10$VESVdPDjL5LF.KCU6jKyqeXNSLASAAfpR2kkIJExtMO.PJvZJAudy",
-};
-
-// copy for server controllers
-export const dummyPlans = [
+// User accounts - For demo purposes, using plain text passwords. In production, use hashed passwords
+export const dummyUsers = [
   {
-    _id: "basic",
-    name: "Basic",
-    price: 10,
-    credits: 100,
-    features: [
-      "100 text generations",
-      "50 image generations",
-      "Standard support",
-      "Access to basic models",
-    ],
+    _id: "689c6deed410acddc0d95a0e",
+    name: "Roshan",
+    email: "admin@example.com",
+    password: "password123",
   },
   {
-    _id: "pro",
-    name: "Pro",
-    price: 20,
-    credits: 500,
-    features: [
-      "500 text generations",
-      "200 image generations",
-      "Priority support",
-      "Access to pro models",
-      "Faster response time",
-    ],
-  },
-  {
-    _id: "premium",
-    name: "Premium",
-    price: 30,
-    credits: 1000,
-    features: [
-      "1000 text generations",
-      "500 image generations",
-      "24/7 VIP support",
-      "Access to premium models",
-      "Dedicated account manager",
-    ],
+    _id: "689c6deed410acddc0d95a0f",
+    name: "GreatStack",
+    email: "greatstack@example.com",
+    password: "password123",
   },
 ];
 
@@ -98,7 +65,7 @@ export const dummyChats = [
   {
     _id: "689de4bbaa932dc3a8ef6cd7",
     userId: "689c6deed410acddc0d95a0e",
-    userName: "GreatStack",
+    userName: "Roshan",
     name: "Boy Running on Water",
     messages: [
       {
@@ -288,16 +255,7 @@ export const dummyChats = [
     ],
     createdAt: "2025-08-13T17:29:52.421Z",
     updatedAt: "2025-08-14T09:39:19.046Z",
-    userName: "GreatStack",
-  },
-  {
-    _id: Date.now(),
-    userId: "gs123456789",
-    name: "New Chat",
-    userName: "GreatStack",
-    messages: [],
-    createdAt: "2025-08-13T17:29:52.421Z",
-    updatedAt: "2025-08-14T09:39:19.046Z",
+    userName: "Roshan",
   },
 ];
 

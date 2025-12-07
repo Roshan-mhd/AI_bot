@@ -1,13 +1,21 @@
 import React, { useEffect } from "react";
 import Community from "./pages/community";
 import Credits from "./pages/credits";
+import Login from "./pages/Login";
 import Sidebar from "./components/sidebar";
 import Chatbox from "./components/chatbox";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useAppContext } from "./context/Appcontext";
 
 const App = () => {
-  const { theme } = useAppContext();
+  const { theme, fetchUser, user } = useAppContext();
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/login";
+
+  useEffect(() => {
+    // Check for logged in user on mount
+    fetchUser();
+  }, []);
 
   useEffect(() => {
     // Apply theme styles to body
@@ -30,8 +38,9 @@ const App = () => {
         }}
       >
         <div className="flex h-screen w-screen">
-          <Sidebar />
+          {!isLoginPage && <Sidebar />}
           <Routes>
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<Chatbox />} />
             <Route path="/credits" element={<Credits />} />
             <Route path="/community" element={<Community />} />
